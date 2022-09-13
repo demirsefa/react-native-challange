@@ -5,7 +5,7 @@ Tribe is looking for people who can build awesome products, so we created this c
 
 ## Instructions
 #### 1. Build your React Native App
-You have 1 week to complete the challenge.
+You have 5 days to complete the challenge.
 
 *Implementation and design will be evaluated.*
 #### 2. Submit your challenge
@@ -23,13 +23,13 @@ Follow these instructions to submit your challenge.
 Hakan owns so many movies that he can't keep track of all of them. He needs some way to keep track of all of his movies.
 
 ## Requirements
-Your React Native app should be able to complete the following tasks:
+Your React Native app should be able to complete the following tasks: (Data does not have persist)
 * Add a new Movie (Title, Genre, Description, Rating, or anything else you think would be important)
 * Remove Movies
 * Edit Movies
 * List all of his movies
 * Persist data using Context or Redux
-* Rate movies (does not have persist)
+* Rate movies 
 * Sort and filter movies by rating and category.
 
 ## Bonus Points
@@ -39,5 +39,5 @@ https://fake-movie-database-api.herokuapp.com/
 
 ## Grading
 The grading of the app  will be based off of three criteria:
-* **40%** - Overall Design and Structure
-* **30%** - Data Management and Store
+* **65%** - Overall Design and Structure
+* **35%** - Data Management and Store
