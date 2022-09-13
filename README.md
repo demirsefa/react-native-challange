@@ -1,10 +1,10 @@
 
-# React - Coding Challenge
+# React Native - Coding Challenge
 
 Tribe is looking for people who can build awesome products, so we created this challenge to test our candidates' overall developer skills.
 
 ## Instructions
-#### 1. Build your web-app
+#### 1. Build your React Native App
 You have 1 week to complete the challenge.
 
 *Implementation and design will be evaluated.*
