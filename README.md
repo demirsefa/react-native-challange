@@ -29,7 +29,7 @@ Your React Native app should be able to complete the following tasks:
 * Edit Movies
 * List all of his movies
 * Persist data using Context or Redux
-* Rate movies
+* Rate movies (does not have persist)
 * Sort and filter movies by rating and category.
 
 ## Bonus Points
