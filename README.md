@@ -34,8 +34,7 @@ Your React Native app should be able to complete the following tasks: (Data does
 
 ## Bonus Points
 * Use a backend 
-
-https://fake-movie-database-api.herokuapp.com/
+https://swapi.dev/api/films/
 
 ## Grading
 The grading of the app  will be based off of three criteria:
