@@ -23,7 +23,7 @@ Follow these instructions to submit your challenge.
 Hakan owns so many movies that he can't keep track of all of them. He needs some way to keep track of all of his movies.
 
 ## Requirements
-Your web app should be able to complete the following tasks:
+Your React Native app should be able to complete the following tasks:
 * Add a new Movie (Title, Genre, Description, Rating, or anything else you think would be important)
 * Remove Movies
 * Edit Movies
@@ -34,9 +34,9 @@ Your web app should be able to complete the following tasks:
 
 ## Bonus Points
 * Use a backend / database for storage
+https://fake-movie-database-api.herokuapp.com/
 
 ## Grading
 The grading of the app  will be based off of three criteria:
-* **30%** - UI and UX
 * **40%** - Overall Design and Structure
 * **30%** - Data Management and Store
