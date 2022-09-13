@@ -33,7 +33,8 @@ Your React Native app should be able to complete the following tasks:
 * Sort and filter movies by rating and category.
 
 ## Bonus Points
-* Use a backend / database for storage
+* Use a backend 
+
 https://fake-movie-database-api.herokuapp.com/
 
 ## Grading
