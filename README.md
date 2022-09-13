@@ -7,7 +7,7 @@ Tribe is looking for people who can build awesome products, so we created this c
 #### 1. Build your React Native App
 You have 5 days to complete the challenge.
 
-*Implementation and design will be evaluated.*
+*Implementation and code structure will be evaluated.*
 #### 2. Submit your challenge
 Follow these instructions to submit your challenge.
 * Setup your Development Environment
