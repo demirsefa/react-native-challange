@@ -1,4 +1,4 @@
-package com.react_native_challange.newarchitecture.components;
+package com.tribe.challenge.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

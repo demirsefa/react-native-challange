@@ -1,36 +1,38 @@
 import {UserModel} from "../models/user.model";
 import {AuthTypes} from "../types/app-types";
 
-export interface AuthReducerState{
+export interface AuthReducerState {
     authInitializing: boolean;
-    userModel:UserModel|null
+    userModel: UserModel | null
 
 }
+
 const defaultAppReducerState: AuthReducerState = {
-    authInitializing:true,
-    userModel:null,
+    authInitializing: true,
+    userModel: null,
 };
 
 export function AuthReducer(state: AuthReducerState = defaultAppReducerState, action: { type: AuthTypes, payload: any }): AuthReducerState {
     switch (action.type) {
         case AuthTypes.INIT_AUTH:
+            console.log("action.payload",action.payload);
             return {
                 ...state,
-                authInitializing:false,
-                userModel:action.payload
+                authInitializing: false,
+                userModel: action.payload
             };
 
         case AuthTypes.USER_SIGNED_IN:
-            return{
+            return {
                 ...state,
-                userModel:action.payload
+                userModel: action.payload
             };
         case AuthTypes.USER_SIGNED_OUT:
-            return{
+            return {
                 ...state,
-                userModel:null
+                userModel: null
             };
-}
+    }
 
     return state;
 }

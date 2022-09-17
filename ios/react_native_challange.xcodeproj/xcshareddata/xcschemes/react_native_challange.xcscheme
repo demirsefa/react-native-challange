@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "react_native_challange.app"
-               BlueprintName = "react_native_challange"
-               ReferencedContainer = "container:react_native_challange.xcodeproj">
+               BuildableName = "react-native-challenge.app"
+               BlueprintName = "react-native-challenge"
+               ReferencedContainer = "container:react-native-challenge.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "react_native_challangeTests.xctest"
-               BlueprintName = "react_native_challangeTests"
-               ReferencedContainer = "container:react_native_challange.xcodeproj">
+               BuildableName = "react-native-challengeTests.xctest"
+               BlueprintName = "react-native-challengeTests"
+               ReferencedContainer = "container:react-native-challenge.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "react_native_challange.app"
-            BlueprintName = "react_native_challange"
-            ReferencedContainer = "container:react_native_challange.xcodeproj">
+            BuildableName = "react-native-challenge.app"
+            BlueprintName = "react-native-challenge"
+            ReferencedContainer = "container:react-native-challenge.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "react_native_challange.app"
-            BlueprintName = "react_native_challange"
-            ReferencedContainer = "container:react_native_challange.xcodeproj">
+            BuildableName = "react-native-challenge.app"
+            BlueprintName = "react-native-challenge"
+            ReferencedContainer = "container:react-native-challenge.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

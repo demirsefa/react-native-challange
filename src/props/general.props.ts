@@ -1,3 +1,3 @@
-export default interface GeneralProps{
-    children:any
+export default interface GeneralProps {
+    children: any
 }

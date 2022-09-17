@@ -2,16 +2,19 @@ import {AppTypes} from "../types/app-types";
 
 export default class AppAction {
 
-    static initApp(): any {
+    public static initApp(): any {
         return async (dispatch: any) => {
-            try {
-                dispatch({
-                    type: AppTypes.INIT_APP
-                });
+            dispatch({
+                type: AppTypes.INIT_APP
+            });
+        };
+    }
 
-            } catch (e) {
-                //log it
-            }
+    public static endSplashAnimation(): any {
+        return async (dispatch: any) => {
+            dispatch({
+                type: AppTypes.END_SPLASH_ANIMATION
+            });
         };
     }
 

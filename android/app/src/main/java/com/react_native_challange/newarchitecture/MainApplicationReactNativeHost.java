@@ -1,4 +1,4 @@
-package com.react_native_challange.newarchitecture;
+package com.tribe.challenge.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.react_native_challange.BuildConfig;
-import com.react_native_challange.newarchitecture.components.MainComponentsRegistry;
-import com.react_native_challange.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.tribe.challenge.BuildConfig;
+import com.tribe.challenge.newarchitecture.components.MainComponentsRegistry;
+import com.tribe.challenge.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

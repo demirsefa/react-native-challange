@@ -1,36 +1,38 @@
-import axios from 'axios';
 import AuthStorageService from "../services/auth-storage.service";
-import { AuthTypes} from "../types/app-types";
+import {AuthTypes} from "../types/app-types";
+import {UserModel} from "../models/user.model";
 
-export default class AppAction {
+export default class AuthAction {
 
-    public static initAuth():any {
+    public static initAuth(): any {
         return async (dispatch: any) => {
-            const token = await AuthStorageService.getSecret();
+            const userModel = await AuthStorageService.getUser();
+            console.log("initAuth---",userModel);
             dispatch({
-                type:AuthTypes.INIT_AUTH,
-                payload:{}
+                type: AuthTypes.INIT_AUTH,
+                payload: userModel
             })
 
         };
     }
-    public static login(authResponseModel: any): any {
+
+
+    public static login(userModel: UserModel): any {
         return async (dispatch: any) => {
-            await AuthStorageService.setSecret(authResponseModel.token);
+            console.log("login---",userModel);
+            await AuthStorageService.setUser(userModel);
             dispatch({
-                type:AuthTypes.USER_SIGNED_IN,
-                payload:authResponseModel
+                type: AuthTypes.USER_SIGNED_IN,
+                payload: userModel
             })
         };
     }
 
-    public static signOut() :any{
+    public static signOut(): any {
         return async (dispatch: any) => {
-            delete axios.defaults.headers.common["wauthorization"];
-            await AuthStorageService.clearSecret();
+            await AuthStorageService.removeUser();
             dispatch({
-                type:AuthTypes.USER_SIGNED_OUT,
-                payload: {}
+                type: AuthTypes.USER_SIGNED_OUT
             })
         };
     }
