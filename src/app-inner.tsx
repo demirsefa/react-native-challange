@@ -14,6 +14,7 @@ import BottomScreen from "./views/screens/bottom.screen";
 import NativeService from "./services/native.service";
 import FiltersScreen from "./views/screens/filters.screen";
 import Colors from "./styles/abstract/colors";
+import {Platform} from "react-native";
 
 const Stack = createNativeStackNavigator();
 
@@ -55,8 +56,8 @@ export default function AppInner() {
                                       color:Colors.whiteText
                                   },
                                   headerBackVisible:true,
-                                  statusBarColor:Colors.orange,
-                                  statusBarStyle:"dark",
+                                  statusBarColor:Platform.select({ios:undefined,android:Colors.orange}),
+                                  statusBarStyle:Platform.select({ios:undefined,android:"dark"}),
                                   headerShown: true,
                                   presentation:"modal",
                                   title:"Filters",

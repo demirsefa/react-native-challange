@@ -1,4 +1,4 @@
-import {Button, Image, TouchableOpacity, View} from "react-native";
+import {Button, Image, Platform, TouchableOpacity, View} from "react-native";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import {BottomLayoutRouteEnum} from "../../app-context/route.enum";
 import React from "react";
@@ -23,8 +23,8 @@ export default function BottomScreen() {
                 color:Colors.whiteText
             },
             headerTintColor: Colors.whiteText,
-            statusBarColor:Colors.orange,
-            statusBarStyle:"dark",
+            statusBarColor:Platform.select({ios:undefined,android:Colors.orange}),
+            statusBarStyle:Platform.select({ios:undefined,android:"dark"}),
             }} initialRouteName={BottomLayoutRouteEnum.movies}>
             <StackBottom.Screen name={BottomLayoutRouteEnum.movies}
                                 options={{

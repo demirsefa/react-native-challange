@@ -1,4 +1,8 @@
-import {AppRegistry} from 'react-native';
+import {AppRegistry, Platform} from 'react-native';
 import App from './src/app';
 
-AppRegistry.registerComponent("react-native-challenge", () => App);
+//son anda farkettim ufak bir patch
+AppRegistry.registerComponent(Platform.select({
+    android:"react-native-challenge",
+    ios:"react_native_challenge"
+}), () => App);
