@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useRef} from 'react';
 import {Animated} from "react-native";
-import SimpleLayout from "../layout/simple.layout";
+import AuthLayout from "../layout/auth.layout";
 import {loginScreenStyles} from "../../styles/screens/login.screen.styles";
 import Sizes from "../../styles/abstract/sizes";
 import GeneralProps from "../../props/general.props";
@@ -52,7 +52,7 @@ export default function LoginScreen() {
         });
     }, [navService]);
 
-    return <SimpleLayout  withTitle >
+    return <AuthLayout withTitle >
         <LoginContainer>
             <Form<LoginRequestModel> onSubmit={onSubmit}>
                     <FormBox>
@@ -71,5 +71,5 @@ export default function LoginScreen() {
 
             </Form>
         </LoginContainer>
-    </SimpleLayout>
+    </AuthLayout>
 }

@@ -5,6 +5,7 @@ import Colors from "../../abstract/colors";
 export const inputStyles = StyleSheet.create({
     input: {
         borderWidth: 1,
+        backgroundColor:"white",
         borderColor: Colors.borderColor,
         borderRadius:Sizes.borderRadius
     },
@@ -14,6 +15,10 @@ export const inputStyles = StyleSheet.create({
     },
     invalidInput:{
         borderColor: Colors.error,
+    },
+    textAreaInput: {
+        height:100,
+        textAlignVertical:"top",
     }
 
 });

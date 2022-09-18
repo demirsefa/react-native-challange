@@ -1,6 +1,10 @@
+import {MovieModel} from "../models/movie.model";
+import {FilterModel} from "../models/filter.model";
+
 export enum RouteEnum {
     login = "login",
     bottomLayout = "bottomLayout",
+    filters="filters",
 }
 
 export enum BottomLayoutRouteEnum {
@@ -12,9 +16,10 @@ export enum BottomLayoutRouteEnum {
 
 export type RouteStackParamList = {
     bottomLayout: { screen: BottomLayoutRouteEnum, params?: any }
+    filters: undefined,
     login: undefined,
     profile: undefined,
-    movies: undefined,
-    moviesDetails: undefined,
-    moviesForm: undefined,
+    movies: { filterModel?:FilterModel },
+    moviesDetails: { movieModel:MovieModel},
+    moviesForm: { movieModel?:MovieModel},
 }

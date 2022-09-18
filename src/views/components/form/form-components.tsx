@@ -34,8 +34,8 @@ export function FormBox({children, style}: { children: any, style?: ViewStyle })
     return <View style={[styles.formBox, style]}>{children}</View>;
 }
 
-export function Label({children}: { children: string }) {
-    return <Text style={styles.label}>{children}</Text>
+export function Label({children,required}: { children: string,required?:boolean }) {
+    return <Text style={styles.label}>{children}{required?"*":""}</Text>
 }
 
 export function FormButtonContainer({children, style}: any) {

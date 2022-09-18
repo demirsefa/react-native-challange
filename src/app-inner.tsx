@@ -11,16 +11,22 @@ import {store} from "./store/store";
 import AppAction from "./actions/app.action";
 import AuthAction from "./actions/auth.action";
 import BottomScreen from "./views/screens/bottom.screen";
+import NativeService from "./services/native.service";
+import FiltersScreen from "./views/screens/filters.screen";
+import Colors from "./styles/abstract/colors";
 
 const Stack = createNativeStackNavigator();
 
 export default function AppInner() {
     const {appInitializing, splashAnimate} = useApp();
     const {authInitializing, userModel} = useAuth();
-    console.log("userModel",userModel);
     useEffect(() => {
         store.dispatch(AppAction.initApp());
         store.dispatch(AuthAction.initAuth());
+        NativeService.listenClipboard();
+        return ()=>{
+            NativeService.removeAllClipboardListeners();
+        }
     }, []);
 
     if (appInitializing || authInitializing || splashAnimate) {
@@ -32,15 +38,31 @@ export default function AppInner() {
                 <Stack.Screen name={RouteEnum.login}
                               options={{
                                   headerShown: false,
-                                  statusBarHidden:true
                               }}
                               component={LoginScreen}/>
                 <Stack.Screen name={RouteEnum.bottomLayout}
                               options={{
                                   headerShown: false,
-                                  statusBarHidden:true
                               }}
                               component={BottomScreen}/>
+                <Stack.Screen name={RouteEnum.filters}
+                              options={{
+                                  headerTintColor: Colors.whiteText,
+                                  headerStyle:{
+                                      backgroundColor:Colors.orange
+                                  },
+                                  headerTitleStyle:{
+                                      color:Colors.whiteText
+                                  },
+                                  headerBackVisible:true,
+                                  statusBarColor:Colors.orange,
+                                  statusBarStyle:"dark",
+                                  headerShown: true,
+                                  presentation:"modal",
+                                  title:"Filters",
+                                  animation:"slide_from_bottom"
+                              }}
+                              component={FiltersScreen}/>
             </Stack.Navigator>
         </NavigationContainer>
     </MainLayout>

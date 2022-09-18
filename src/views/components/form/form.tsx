@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import {FormProvider, useForm} from "react-hook-form";
 import {FormDataType, FormProps} from "../../../models/form.model";
 import Text from "../text";
@@ -59,11 +59,18 @@ function LoadingContainer({loading, children}: { loading: boolean, children: any
     </>;
 }
 
-export default function Form<T, K = any>({children, onSubmit}: FormProps<T, K>): any {
+export default function Form<T, K = any>({children,data, onSubmit}: FormProps<T, K>): any {
     const methods = useForm();
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<any>(null);
 
+    useEffect(() => {
+        if(data){
+            methods.reset(data, {
+                keepDefaultValues: false,
+            });
+        }
+    }, [methods.reset, data]);
     const onFormSubmit = useCallback((data: FormDataType<T>) => {
         setLoading(true);
         setError(null);
@@ -84,7 +91,8 @@ export default function Form<T, K = any>({children, onSubmit}: FormProps<T, K>):
             methods.handleSubmit(onFormSubmit)();
         },
     };
-    return <View pointerEvents={loading ? "none" : "auto"} style={[{...(loading ? {opacity: 1} : {})}]}>
+    return <View pointerEvents={loading ? "none" : "auto"} style={[{...(loading ? {opacity: 1} : {        paddingBottom:20,
+        })}]}>
         {error&&<View style={styles.formError}>
             {typeof error==="string"&&<Text style={styles.formErrorText}>{error}</Text>}
         </View>}

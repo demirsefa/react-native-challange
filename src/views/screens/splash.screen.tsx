@@ -4,8 +4,8 @@ import Text from "../components/text";
 import Sizes from "../../styles/abstract/sizes";
 import {store} from "../../store/store";
 import AppAction from "../../actions/app.action";
-import SimpleLayout from "../layout/simple.layout";
-import {simpleLayoutStyles} from "../../styles/layout/simple.layout.styles";
+import AuthLayout from "../layout/auth.layout";
+import {authLayoutStyles} from "../../styles/layout/auth.layout.styles";
 
 function SplashTitle(props: any) {
     const [animStatus, setAnimStatus] = useState(false);
@@ -52,10 +52,10 @@ function SplashTitle(props: any) {
                 transform: [{translateY: animStatus ? transformAnim2 : transformAnim1}]
             }}
         >
-            <Text style={simpleLayoutStyles.title}>
+            <Text style={authLayoutStyles.title}>
                 Tribe
             </Text>
-            <Text style={simpleLayoutStyles.title}>
+            <Text style={authLayoutStyles.title}>
                 Challenge
             </Text>
         </Animated.View>
@@ -64,7 +64,7 @@ function SplashTitle(props: any) {
 
 export default function SplashScreen() {
 
-    return <SimpleLayout style={{justifyContent:"center"}}>
+    return <AuthLayout style={{justifyContent:"center"}}>
         <SplashTitle/>
-    </SimpleLayout>
+    </AuthLayout>
 }

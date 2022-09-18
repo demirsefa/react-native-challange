@@ -1,9 +1,7 @@
 import {View} from "react-native";
-import GeneralProps from "../../props/general.props";
 
-export default function FetchListScreen({children}: GeneralProps) {
+export default function FetchListScreen() {
 
     return <View>
-        {children}
     </View>
 }

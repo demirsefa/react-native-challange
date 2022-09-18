@@ -1,7 +1,7 @@
 import {StyleSheet} from "react-native";
 import Sizes from "../abstract/sizes";
 
-export const simpleLayoutStyles = StyleSheet.create({
+export const authLayoutStyles = StyleSheet.create({
     main: {
         flex: 1,
     },
